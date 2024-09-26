@@ -39,7 +39,7 @@
         <p>{{ capitalize(stat.stat.name) }}</p>
         <div class="progress-bar">
           <div :style="{ width: getStatWidth(stat.base_stat) }" class="progress"></div>
-          <span class="stat-value">{{ stat.base_stat }}</span>
+          <span class="stat-value">{{ stat.base_stat }} / 255</span>
         </div>
       </div>
     </div>
@@ -631,7 +631,7 @@ width: 250px
 
 p {
   font-size: 30px; 
-  color: rgb(255, 205, 5);
+  color: black;
   text-shadow: 2px 2px 2px rgb(255, 205, 5); 
   text-transform: uppercase; 
   font-family: inherit;
@@ -675,7 +675,7 @@ p {
   border: 2px solid #333; 
   padding: 8px 12px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); 
-  background-color: rgba(255, 203, 5, 0.7); 
+  
   transition: transform 0.3s; 
 }
 
@@ -717,6 +717,32 @@ p {
 .controls span {
   font-size: 24px; 
 }
+@media (min-width: 1000px) and (max-width: 1400px) {
+    .container {
+        max-width: 1200px; /* Limita el ancho máximo a 1200px */
+        margin: 0 auto; /* Centra el contenedor */
+        padding: 40px; /* Aumenta el padding */
+    }
+    
+    .header {
+        font-size: 2em; /* Aumenta el tamaño de fuente del encabezado */
+    }
+    
+    .card {
+        display: flex; /* Muestra tarjetas en un diseño flexible */
+        justify-content: space-between; /* Espacio entre las tarjetas */
+        margin: 10px 0;
+    }
+    
+    .card-item {
+        flex: 1; /* Cada tarjeta ocupa igual espacio */
+        margin: 0 10px; /* Espacio entre tarjetas */
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+}
+
 
 @media (max-width: 900px) {
   .body {
@@ -759,6 +785,7 @@ order:1;
     margin-top: 20px; 
   }
 }
+
 @media (max-width: 700px) {
   .pokedex {
     flex-direction: column; 
