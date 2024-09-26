@@ -277,7 +277,6 @@ const nextPokemon = () => {
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  height: 100vh; 
   background-image: url("https://i.pinimg.com/564x/59/2c/8c/592c8c67092d24e7ca8c728044c9b1c2.jpg");
   background-position: left 320px;
 
